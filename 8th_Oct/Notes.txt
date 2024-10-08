@@ -7,13 +7,13 @@
 In Javascript, we can define or create variables using three ways and they are :
 1. var 2. let and 3. const
 
-Variables can store different types of data, such as numbers, strings, or booleans, arrays and objects.
+Variables can (box) store different types of data, such as numbers, strings, or booleans, arrays and objects.
 
 example :
 
-var age = 25;
-let student = "John"
-const isStudent = true;
+var age = 25; //number
+let student = "John" //string
+const isStudent = true; //boolean
 
 
 "In this example, age is a number, name is a string, and isStudent is a boolean. let allows the value to change later, but const is constant and can't be reassigned."
@@ -30,6 +30,7 @@ let b = 5;
 
 // Arithmetic
 let sum = a + b; // 15
+console.log(sum)
 let difference = a - b; // 5
 
 // Comparison
@@ -38,14 +39,20 @@ let isGreater = a > b; // true
 
 console.log(sum, difference, isEqual, isGreater);
 
-************************************************ **************************************
+**************************************************************************************
+
+Note : Almost everything in Javascript is an object 
 
 3. Functions
 
 "Functions are reusable blocks of code. They let us perform an action and return a result. Here's an example of a function that adds two numbers."
 
+fan : rotate (switch one)
+light : on or off
 
 Example 1:
+
+function declaration : 
 
 function addNumbers(x, y) {
     return x + y;
@@ -117,3 +124,11 @@ Example : Adding a New Element
 const newDiv = document.createElement('div');
 newDiv.textContent = 'I am a new div!';
 document.body.appendChild(newDiv);
+
+
+
+**************************************************************************************
+
+Mini Assignment : 
+
+For the assignment, extend the click counter project by adding two more buttons—one to decrease the count and one to reset it to zero. Here's a hint: you'll need to add more eventListeners for the new buttons and modify the count accordingly. Also add button to toggle between light and dark. 
