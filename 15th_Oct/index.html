@@ -1,0 +1,61 @@
+<!-- Web Storage  API -->
+<!-- local Storage - > Data will be stored permanently in your browser unless and until you delete in manually.
+Session Storage -> Data will be stored for the time till you close the tab... -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage and Session Storage</title>
+</head>
+
+<body>
+    <label for="nameInput">Enter your name: </label>
+    <input type="text" id="nameInput" placeholder="enter your name" />
+
+    <button id="saveBtn">Save name in local Storage</button>
+    <button id="getBtn">Get Name from Local storage</button>
+
+    <h1 id="output"></h1>
+
+
+    <script>
+        // DOM Manipulate 
+        const nameInput = document.querySelector("#nameInput");
+        const saveBtn = document.querySelector("#saveBtn");
+        const getBtn = document.querySelector("#getBtn");
+        const output = document.querySelector("#output");
+
+        function saveName() {
+            const name = nameInput.value;
+
+            if (name) {
+                localStorage.setItem("userName", name)
+                alert("Name saved")
+            }
+            else {
+                alert("please enter a name!")
+            }
+
+        }
+
+        function getName() {
+            const storedName = localStorage.getItem('userName')
+            if (storedName) {
+                output.innerText = `Hello, ${storedName}!`
+            }
+            else {
+                output.innerText = "No name found in localStorage"
+            }
+        }
+
+        saveBtn.addEventListener("click", saveName);
+        getBtn.addEventListener("click", getName);
+
+    </script>
+
+</body>
+
+</html>
