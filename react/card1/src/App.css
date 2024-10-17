@@ -1,0 +1,58 @@
+/* App.css */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.app {
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  min-height: 100vh; /* Ensure it covers the full viewport height */
+}
+
+.input-container {
+  margin-bottom: 1.5rem;
+}
+
+input {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.instructions {
+  color: #666;
+}
+
+/* Light theme */
+.app.light {
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Dark theme */
+.app.dark {
+  background-color: #222;
+  color: #f9f9f9;
+}
